@@ -1,7 +1,6 @@
 name: curl
 description: cURL and libcurl
 version: 7.x
-
 source: github nddrylliog/ooc-curl
 
 platforms:
@@ -19,5 +18,11 @@ platforms:
     check:
       - c:
         - headers curl/curl curl/easy
-      
+
+# Values for demonstrating type conversion
+year: 2014
+price: 1.50
+ignore: ~
+is_true: true
+is_false: false
 
