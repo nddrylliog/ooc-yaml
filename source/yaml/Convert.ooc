@@ -17,11 +17,6 @@ Convert: class {
         return s toString()
     }
 
-    // Converts an EmptyNode to ""
-    fromEmpty: static func(s: EmptyNode) -> String {
-        return ""
-    }
-
     // Walks a SequenceNode, converting it to an Bag
     fromSequence: static func(s: SequenceNode) -> Bag {
         a := Bag new()
@@ -32,7 +27,7 @@ Convert: class {
                case SequenceNode =>
                    a.add(fromSequence(v as SequenceNode))
                case EmptyNode =>
-                   a.add(fromEmpty(v as EmptyNode))
+                   a.add(null)
                case ScalarNode =>
                     coerceScalar(a, fromScalar(v as ScalarNode))
            }
@@ -50,7 +45,7 @@ Convert: class {
                 case SequenceNode =>
                     h.put(k, fromSequence(v as SequenceNode))
                 case EmptyNode =>
-                    h.put(k, fromEmpty(v as EmptyNode))
+                    h.put(k, null)
                 case ScalarNode =>
                     coerceScalar(h, k, fromScalar(v as ScalarNode))
             }
