@@ -18,11 +18,3 @@ platforms:
     check:
       - c:
         - headers curl/curl curl/easy
-
-# Values for demonstrating type conversion
-year: 2014
-price: 1.50
-ignore: ~
-is_true: true
-is_false: false
-

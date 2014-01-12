@@ -1,0 +1,9 @@
+name: convert
+
+os:
+  name: linux
+  distribution: ubuntu
+  setup: apt libcurl4-openssl-dev
+  categories:
+    - binary
+    - cli
