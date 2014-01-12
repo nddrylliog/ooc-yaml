@@ -51,7 +51,9 @@ YAMLParser: class {
     parseAll: func(callbacks: YAMLCallback) {
         while(true) {
             parseEvent(callbacks event&)
-            if(callbacks onEvent() == false) break
+            hadEvent := callbacks onEvent()
+            ((callbacks event&) as EventPointer) delete()
+            if (!hadEvent) break
         }
     }
 
@@ -62,6 +64,7 @@ YAMLParser: class {
     }
 
     destroy: func {
+        "destroying parser" println()
         parser delete()
     }
 }
