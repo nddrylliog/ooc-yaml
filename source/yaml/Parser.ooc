@@ -64,7 +64,6 @@ YAMLParser: class {
     }
 
     destroy: func {
-        "destroying parser" println()
         parser delete()
     }
 }
