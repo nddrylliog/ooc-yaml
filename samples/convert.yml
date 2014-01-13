@@ -1,5 +1,8 @@
 name: convert
-
+num: 77
+percent: 90.156
+empty: ~
+yes: true
 os:
   name: linux
   distribution: ubuntu
