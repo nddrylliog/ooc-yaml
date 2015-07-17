@@ -1,7 +1,6 @@
 name: curl
 description: cURL and libcurl
 version: 7.x
-
 source: github nddrylliog/ooc-curl
 
 platforms:
@@ -19,5 +18,3 @@ platforms:
     check:
       - c:
         - headers curl/curl curl/easy
-      
-

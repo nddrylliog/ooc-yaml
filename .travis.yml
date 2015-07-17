@@ -12,4 +12,4 @@ script:
   - rock -v from-file.ooc -o=travis/from-file && travis/from-file
   - rock -v walker.ooc -o=travis/walker && travis/walker
   - rock -v utils-demo.ooc -o=travis/utils-demo && travis/utils-demo
-
+  - rock -v convert.ooc -o=travis/convert && travis/convert
