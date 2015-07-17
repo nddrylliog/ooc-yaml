@@ -51,7 +51,9 @@ YAMLParser: class {
     parseAll: func(callbacks: YAMLCallback) {
         while(true) {
             parseEvent(callbacks event&)
-            if(callbacks onEvent() == false) break
+            shouldBreak := callbacks onEvent() == false
+            ((callbacks event&) as EventPointer) delete()
+            if (shouldBreak) break
         }
     }
 

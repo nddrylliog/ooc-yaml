@@ -21,6 +21,7 @@ EventPointer: cover from Event* {
     initMappingStart: extern(yaml_mapping_start_event_initialize) func (CString, CString, Bool, YAMLMappingStyle)
     initMappingEnd: extern(yaml_mapping_end_event_initialize) func
 
+    delete: extern(yaml_event_delete) func
 }
 
 EventType: cover {
